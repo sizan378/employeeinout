@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+{% endblock %}
+
+
+{% block body %}
+
+<h1 class="text-center mt-5"> Attendance Sheet </h1>
+<p class="text-center"> Please Click button and submit your Attendance </p>
+    <form method="POST" class="text-center">
+        {% csrf_token %}
+        <button>Submit</button>
+
+    {% if status == 2 %}
+    <p class="text-center text-danger">Sorry, You can't attend office more than once a day </p>
+    {% endif %}
+
+    {% if status == 3 %}
+    <p class="text-center"> User Create successfully </p>
+    {% endif %}
+
+    {% if status == 3 %}
+    <p class="text-center"> You gotta login fast </p>
+    {% endif %}
+    </form>
+
+{% endblock %}
