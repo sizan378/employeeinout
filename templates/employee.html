@@ -28,24 +28,18 @@
             {% for u in user %}
           <tr>
             
-            <td><a href="#">{{ u.attender }}</a></td>
+            <td><a href="#">{{ u.attender.name }}</a></td>
             <td>{{ u.datetime }}</td>
-            {% for p in out %}
+            <td>{{ u.outtime.datetime }}</td>
             
-                <td>{{ p.datetime }}</td>
-            
-            {% endfor%}
             
           </tr>
           {% endfor %}
         </tbody>
-
-       
       </table>
 
 
     </div>
-  
 </div>
 
 
