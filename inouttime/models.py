@@ -44,6 +44,7 @@ class InOutTime(models.Model):
 
 
 class EmployeeIP(models.Model):
+    employeeName = models.TextField(default='')
     ip = models.TextField(default='')
     country = models.TextField(default='')
 

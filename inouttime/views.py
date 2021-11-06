@@ -43,10 +43,11 @@ def getLogin(request):
                 try:
                     response = DbIpCity.get(ip, api_key='free')
                     country = response.country + " | " + response.city
+                
                 except:
                     country="Unknown"
-                
-                b = EmployeeIP(ip=ip,country=country)
+                print(user)
+                b = EmployeeIP(ip=ip,country=country,employeeName=user)
                 b.save()
                 return redirect('index')
 
